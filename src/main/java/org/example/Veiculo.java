@@ -18,51 +18,77 @@ public class Veiculo {
         this.potencia = potencia;
         this.lugares = lugares;
     }
+    // Getters
     public String getPlaca() {
         return placa;
     }
-    public void setPlaca(String placa) {
-    }
+
     public String getModelo() {
         return modelo;
     }
-    public void setModelo(String modelo) {
-    }
+
     public String getMarca() {
         return marca;
     }
-    public void setMarca(String marca) {
 
-    }
     public String getCategoria() {
         return categoria;
     }
-    public void setCategoria(String categoria) {
 
-    }
     public int getAno() {
         return ano;
     }
-    public void setAno(int ano) {
 
-    }
     public int getPotencia() {
         return potencia;
     }
-    public void setPotencia(int potencia) {
-    }
+
     public int getLugares() {
         return lugares;
     }
+
+    // Setters
+    public void setPlaca(String placa) {
+    }
+
+    public void setModelo(String modelo) {
+    }
+
+    public void setMarca(String marca) {
+
+    }
+
+    public void setCategoria(String categoria) {
+
+    }
+
+    public void setAno(int ano) {
+
+    }
+
+    public void setPotencia(int potencia) {
+    }
+
     public void setLugares(int lugares) {
     }
 
     public String toString() {
-        return placa + " - " + modelo + " (" + marca + ", " + ano + "), Potência: " + potencia +
-                ", Lugares: " + lugares + ", Categoria: " + categoria;
+        return "Placa: " + placa + "\n" +
+                "Modelo: " + modelo + "\n" +
+                "Marca: " + marca + "\n" +
+                "Ano: " + ano + "\n" +
+                "Potencia: " + potencia + "\n" +
+                "Lugares: " + lugares + "\n" +
+                "Categoria" + categoria;
     }
 
-
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Veiculo outro = (Veiculo) obj;
+        return placa.equals(outro.placa);
+    }
 
 }
 

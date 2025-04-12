@@ -1,7 +1,7 @@
 package org.example;
 
 public class LDE {
-    private class Node {
+    protected class Node {
         Object data;
         Node prev;
         Node next;
@@ -95,5 +95,11 @@ public class LDE {
             System.out.println(current.data);
             current = current.prev;
         }
+    }
+    public Node getHead() {
+        return head;
+    }
+    public Node getTail() {
+        return tail;
     }
 }
